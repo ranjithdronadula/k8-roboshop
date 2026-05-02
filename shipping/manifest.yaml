@@ -8,8 +8,8 @@ metadata:
     project: roboshop
     tier: app
 data:
-    CART_ENDPOINT: "cart:8080" 
-    DB_HOST: "mysql"
+  CART_ENDPOINT: "cart:8080"
+  DB_HOST: "mysql"
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -39,7 +39,7 @@ spec:
     spec:
       containers:
       - name: shipping
-        image: ranjithops/shipping:v1
+        image: joindevops/shipping:v1
         envFrom:
         - configMapRef:
             name: shipping
